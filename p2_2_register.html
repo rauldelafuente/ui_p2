@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <!-- This link  enables the icons for the social media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+    <script src="script/JavaScript.js"></script>
+</head>
+
+<body style="margin: 0">
+    <script>
+        window.onclick = function (event) {
+            var popup = document.getElementById("myPopup")
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+            if (!event.target.matches('.hambtn')) {
+                var dropdowns = document.getElementsByClassName("hamDropdown_content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Sets the Nav Bar, and creates the border -->
+    <div class="navbar_color">
+        <nav class="navbar border">
+            <img src="https://www.uic.mx/posgrados/files/2018/05/default-user.png" alt="UC3M Logo" class="nav_img">
+            <div style="margin-left: 5px; font-weight: bold; float: left;">
+                <H1>Anonymous User</H1>
+            </div>
+            <!-- Lists the 3 options -->
+            <ul class="options-top border">
+                <li class="options-li"><a href="p2_2_home.html">Home</a></li>
+                <li class="options-li"><a href="p2_2_register.html">Register</a></li>
+                <li class="options-li"><a href="p1_3_Personal_info.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main_content">
+        <div class="info-little info-default">
+            <div class="info-heading">
+                <h3 class="info-title">Username (Required)</h3>
+            </div>
+            <input type="text" id="username" placeholder="Username" class="info-body">
+        </div>
+        <!-- Surname Information -->
+        <div class="info-little info-default info-right">
+            <div class="info-heading">
+                <h3 class="info-title">Password (Maximum 8 characters, only a-z and 0-9 allowed)</h3>
+            </div>
+            <input type="password" id="password" placeholder="Password" class="info-body">
+        </div>
+        <!-- Email -->
+        <div class="info info-default">
+            <div class="info-heading">
+                <h3 class="info-title">Email</h3>
+            </div>
+            <input type="text" id="password" placeholder="Password" class="info-body">
+        </div>
+        <!-- Address -->
+        <div class="info-little info-default">
+            <div class="info-heading">
+                <h3 class="info-title">Address</h3>
+            </div>
+            <div class="info-body">
+                Elm Street, 5
+            </div>
+        </div>
+        <!-- Phone Number -->
+        <div class="info-little info-default info-right">
+            <div class="info-heading">
+                <h3 class="info-title">Phone number</h3>
+            </div>
+            <div class="info-body">
+                635852412
+            </div>
+        </div>
+        <!-- Birthday -->
+        <div class="info info-default">
+            <div class="info-heading">
+                <h3 class="info-title">Birthday</h3>
+            </div>
+            <div class="info-body">
+                25th june 1997
+            </div>
+        </div>
+    </div>
+    <!-- Sets up the footer for the social media links -->
+    <footer>
+        <div class="foot-part" style="text-align: center">
+            <!-- List with the different social media tiles -->
+            <a href="https://www.facebook.com/sharer.php?u=google.com" target="https://www.google.com"
+                class="fa fa-facebook"></a>
+            <a href="http://twitter.com/share?text=Check out my webpage! &url=http://google.com"
+                class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=google.com&title=LinkedIn%20Developer%20Network&summary=My%20favorite%20developer%20program&source=LinkedIn"
+                class="fa fa-linkedin"></a>
+        </div>
+    </footer>
+</body>

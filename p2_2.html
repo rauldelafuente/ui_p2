@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <!-- This link  enables the icons for the social media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+    <script src="script/JavaScript.js"></script>
+</head>
+
+<body style="margin: 0">
+    <script>
+        window.onclick = function (event) {
+            var popup = document.getElementById("myPopup")
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+            if (!event.target.matches('.hambtn')) {
+                var dropdowns = document.getElementsByClassName("hamDropdown_content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Sets the Nav Bar, and creates the border -->
+    <div class="navbar_color">
+        <nav class="navbar border">
+            <img src="https://www.uic.mx/posgrados/files/2018/05/default-user.png"
+                alt="UC3M Logo" class="nav_img">
+            <div style="margin-left: 5px; font-weight: bold; float: left;">
+                <H1>Anonymous User</H1>
+            </div>
+            <!-- Lists the 3 options -->
+            <ul class="options-top border">
+                <li class="options-li"><a href="p2_2_home.html">Home</a></li>
+                <li class="options-li"><a href="p1_3_Last_Options.html">My Profile</a></li>
+                <li class="options-li"><a href="p1_3_Personal_info.html">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main_content">
+        <!-- Div for the main title divisions -->
+        <div class="main_box">
+            <!-- Division for the title -->
+            <div class="norm title">
+                <h2 style="float: left">Food</h2>
+                <!-- Creates the hamburger button -->
+                <div class="ham">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+                        alt="Hamburger Button" style="width: 10%; float: right" onclick="myDropdown(this.parentElement)"
+                        class="hambtn">
+                    <div class="hamDropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#"
+                            onclick="archive(this.parentElement.parentElement.parentElement.parentElement)">Archive</a>
+                    </div>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://s03.s3c.es/imag/_v0/770x420/d/c/f/700x420_goiko-grill-alicante.jpg" alt="food">
+                    Go to eat Goiko Grill
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://www.rd.com/wp-content/uploads/2017/12/the-true-story-behind-the-mysterious-mcdonalds-gold-card-673955074-Vytautas-Kielaitis-1024x683.jpg"
+                        alt="food">
+                    Go to eat McDonalds
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://static1.squarespace.com/static/55c7b699e4b0ff8d211400b0/t/55ca2180e4b04eba9298cf0e/1569280521912/"
+                        alt="food">
+                    Go to eat Heavenly Buffaloes
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://www.esmadrid.com/sites/default/files/styles/content_type_full/public/recursosturisticos/restaurantes/DiverXoDavidMunozLuisGaspar_1421158606.999.jpg?itok=LK34MaJZ"
+                        alt="food">
+                    Go to eat DiverXO
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://livingnomads.com/wp-content/uploads/2016/05/Roast-Suckling-Pig-at-Sobrino-de-Bot%C3%ADn-1.jpg"
+                        alt="food">
+                    Go to eat Sobrino de Botin
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTKgZzZrykgac3zHUefYZxIcDMnsGeBuJzEPMG2sF0Wb_-eNcB"
+                        alt="food">
+                    Go to eat La Tierra Burrito Bar
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Div for the main title divisions -->
+        <div class="main_box">
+            <!-- Division for the title -->
+            <div class="norm title">
+                <h2 style="float: left">Sports</h2>
+                <!-- Creates the hamburger button -->
+                <div class="ham">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+                        alt="Hamburger Button" style="width: 10%; float: right" onclick="myDropdown(this.parentElement)"
+                        class="hambtn">
+                    <div class="hamDropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#"
+                            onclick="archive(this.parentElement.parentElement.parentElement.parentElement)">Archive</a>
+                    </div>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="food">
+                    Go to play futbol
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://www.waterpology.com/wp-content/uploads/2019/03/filip-filipovic.jpg" alt="food">
+                    Go to play water polo
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Div for the main title divisions -->
+        <div class="main_box">
+            <!-- Division for the title -->
+            <div class="norm title">
+                <h2 style="float: left">Concerts</h2>
+                <!-- Creates the hamburger button -->
+                <div class="ham">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+                        alt="Hamburger Button" style="width: 10%; float: right" onclick="myDropdown(this.parentElement)"
+                        class="hambtn">
+                    <div class="hamDropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#"
+                            onclick="archive(this.parentElement.parentElement.parentElement.parentElement)">Archive</a>
+                    </div>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="food">
+                    Go to the DJ Snake concert
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://i.ytimg.com/vi/WCU4dUfa1RA/maxresdefault.jpg" alt="food">
+                    Go to the Martin Garrix concert
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+            <!-- This section is for the cards within the main box -->
+            <div class="card">
+                <!-- Creates the close button for the card -->
+                <div class="close">
+                    <button type="button" onclick="confirmDelete(this)" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Content within the card, including the image -->
+                <div class="card_content">
+                    <img src="https://www.rollingstone.com/wp-content/uploads/2019/03/shutterstock_10159306t.jpg?resize=900,600&w=450"
+                        alt="food">
+                    Go to the George Strait concert
+                </div>
+                <!-- Creates the like, comment, and share button. Adds in the date and time for the button -->
+                <div class="card_footer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png"
+                        alt="like button" style="width: 15%" title="Like this card" onclick="like(this)">
+                    <img src="https://www.stickpng.com/assets/images/58adf251e612507e27bd3c32.png" alt="comment button"
+                        style="width: 15%" title="Comment on this card">
+                    <img src="https://cdn0.iconfinder.com/data/icons/harmonicons-07/64/share-512.png" alt="share button"
+                        style="width: 15%" title="Share this card" onclick="popup(this.parentElement.parentElement)">
+                    <span style="margin-left: 5%">
+                        03/06/19 15:45
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- The Popup -->
+        <div id="myPopup" class="popup">
+            <!-- Popup content -->
+            <div class="popup-content">
+                <span class="close_popup" onclick="closePopup()">&times;</span>
+                <p>Would you like to share</p>
+                <div class="share" style="text-align: center">
+                    <a href="https://www.facebook.com/sharer.php?u=google.com" target="https://www.google.com"
+                        class="fa fa-facebook"></a>
+                    <a href="http://twitter.com/share?text=Check out my webpage! &url=http://google.com"
+                        class="fa fa-twitter"></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=google.com&title=LinkedIn%20Developer%20Network&summary=My%20favorite%20developer%20program&source=LinkedIn"
+                        class="fa fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sets up the footer for the social media links -->
+    <footer>
+        <div class="foot-part" style="text-align: center">
+            <!-- List with the different social media tiles -->
+            <a href="https://www.facebook.com/sharer.php?u=google.com" target="https://www.google.com"
+                class="fa fa-facebook"></a>
+            <a href="http://twitter.com/share?text=Check out my webpage! &url=http://google.com"
+                class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=google.com&title=LinkedIn%20Developer%20Network&summary=My%20favorite%20developer%20program&source=LinkedIn"
+                class="fa fa-linkedin"></a>
+        </div>
+    </footer>
+</body>
